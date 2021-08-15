@@ -343,6 +343,11 @@ const inputTextFirst = document.querySelector("#input-text-first");
 const inputTextSecond = document.querySelector("#input-text-second");
 
 window.addEventListener("load", () => {
+   if (localStorage.getItem("choseed")) {
+  } else {
+    localStorage.setItem("choseed", "english");
+  }
+
   let lastChose = localStorage.getItem("choseed");
 
   const chose = quizDataAll[lastChose];
